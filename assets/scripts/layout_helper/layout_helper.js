@@ -2,7 +2,12 @@ var LayoutHelper = {
 
     Init : function()
     {
-        $('select').chosen();
+      $('.js_center').each(function(){
+        $(this).width($(this).width() + parseInt($(this).css('padding-right'), 10) + parseInt($(this).css('padding-left'), 10));
+        $(this).css('display', 'block');
+        $(this).css('margin', '0 auto');
+        $(this).css('float', 'none');
+      });
     },
 
     EncodeUrl : function(url){

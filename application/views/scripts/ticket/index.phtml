@@ -1,0 +1,88 @@
+<div class="ticket_creation_container span9 js_center">
+  <form method="POST" action="ticket">
+    <div class="control-group">
+      <label class="control-label" for="first_name">First Name</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on"><i class="icon-user"></i></span>
+          <input class="span4"
+                 id="first_name"
+                 name="info[first_name]"
+                 type="text"
+                 value="<?php echo isset($info['first_name']) ? $info['first_name'] : ''?>"
+              >
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="last_name">Last Name</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on"><i class="icon-user"></i></span>
+          <input class="span4"
+                 id="last_name"
+                 name="info[last_name]"
+                 type="text"
+                 value="<?php echo isset($info['last_name']) ? $info['last_name'] : ''?>"
+              >
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="email_address">Email Address</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on"><i class="icon-envelope"></i></span>
+          <input class="span4"
+                 id="email_address"
+                 name="info[email_address]"
+                 type="text"
+                 value="<?php echo isset($info['email_address']) ? $info['email_address'] : ''?>"
+              >
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="phone_number">Phone Number</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on"><i class="icon-random"></i></span>
+          <input class="span4"
+                 id="phone_number"
+                 name="info[phone_number]"
+                 type="text"
+                 value="<?php echo isset($info['phone_number']) ? $info['phone_number'] : ''?>"
+              >
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="ticket_category_id">Category</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on"><i class="icon-bell"></i></span>
+          <select class="span4"
+                  id="ticket_category_id"
+                  name="info[ticket_category_id]"
+              ><?php echo Model_Operation_HTML::generateSelectOptionsHTML($this->ticket_category_list_composed, (isset($info['ticket_category_id']) ? $info['ticket_category_id'] : ''))?></select>
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Your Enquiry</label>
+      <div class="controls span8" style="margin: 0">
+        <textarea id="content" name="info[content]" style="width:100%;"></textarea>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls span8" style="margin: 10px 0 0 0;">
+        <input type="submit" name="submit" value="Send &raquo;" class="btn btn-success btn-large js_center">
+        <div class="clear"></div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+  CKEDITOR.replace('content');
+</script>
