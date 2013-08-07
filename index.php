@@ -1,19 +1,46 @@
 <?php
+ini_set("memory_limit","80M");
 
-set_time_limit(20000);
+function getIPAddress()
+{
+  if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+    return $_SERVER['HTTP_X_FORWARDED_FOR'];
 
-define("BASE_PATH", dirname(__FILE__).DIRECTORY_SEPARATOR);
-define("APPLICATION_PATH", dirname(__FILE__).DIRECTORY_SEPARATOR . 'application' . DIRECTORY_SEPARATOR);
+  if (isset($_SERVER['HTTP_CLIENT_IP']))
+    return $_SERVER['HTTP_CLIENT_IP'];
 
-require_once(BASE_PATH . 'application/core/Loader.php');
-require_once(BASE_PATH . 'application/core/View.php');
-require_once(BASE_PATH . 'application/core/Handler.php');
+  return $_SERVER['REMOTE_ADDR'];
+}
+$_SERVER['REMOTE_ADDR'] = getIPAddress();
 
-Application_Loader::getInstance()->load(APPLICATION_PATH . 'models' . DIRECTORY_SEPARATOR);
+date_default_timezone_set('UTC');
+// Define path to base directory
+defined('ROOT_PATH')
+    || define('ROOT_PATH', dirname(__FILE__));
 
-$actionName = Model_Helper_Request::fetchCurrentPage() . 'Action';
 
-if(method_exists(Application_Handler::getInstance(), $actionName))
-  Application_Handler::getInstance()->$actionName();
-else
-  Application_Handler::getInstance()->errorAction();
+// Define path to application directory
+defined('APPLICATION_PATH')
+    || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/application'));
+
+// Define application environment
+defined('APPLICATION_ENV')
+    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
+
+// Ensure library/ is on include_path
+set_include_path(implode(PATH_SEPARATOR, array(
+    realpath(APPLICATION_PATH . '/../library'),
+    get_include_path(),
+)));
+
+/** Zend_Application */
+require_once 'Zend/Application.php';  
+
+// Create application, bootstrap, and run
+$application = new Zend_Application(
+    APPLICATION_ENV, 
+    APPLICATION_PATH . '/configs/application.ini'
+);
+
+$application->bootstrap()
+            ->run();
