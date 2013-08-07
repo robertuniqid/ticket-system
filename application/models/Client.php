@@ -46,6 +46,17 @@ class Model_Client
     }
 
     /**
+     * Get the value from the record with the given email_address
+     *
+     * @param string $email_address
+     * @return array
+     */
+    public static function getByEmailAddress($email_address)
+    {
+      return self::getTableInstance()->getByEmailAddress($email_address);
+    }
+
+    /**
      * Insert the record in the database
      *
      * @param array $record

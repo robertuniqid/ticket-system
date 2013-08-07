@@ -2,30 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/TicketController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/ticket/index.phtml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/models/helper/Request.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/models/operation/FileStorage.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/application.ini" afterPath="$PROJECT_DIR$/application/configs/application.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/bootstrap.js" afterPath="$PROJECT_DIR$/assets/scripts/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/bootstrap.min.js" afterPath="$PROJECT_DIR$/assets/scripts/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/ticket/sent.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Client.php" afterPath="$PROJECT_DIR$/application/models/Client.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Table/Client.php" afterPath="$PROJECT_DIR$/application/models/Table/Client.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/TicketController.php" afterPath="$PROJECT_DIR$/application/controllers/TicketController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/TicketStatus.php" afterPath="$PROJECT_DIR$/application/models/TicketStatus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Table/TicketStatus.php" afterPath="$PROJECT_DIR$/application/models/Table/TicketStatus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/ticket/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/ticket/index.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/layout_helper/layout_helper.js" afterPath="$PROJECT_DIR$/assets/scripts/layout_helper/layout_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/ticket_system.sql" afterPath="$PROJECT_DIR$/documents/ticket_system.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ticket-system.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375888065663" ignored="false" />
     <file path="/application.ini" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375887518034" ignored="false" />
-    <file path="/layout.phtml" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375891452962" ignored="false" />
+    <file path="/layout.phtml" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375895071997" ignored="false" />
     <file path="/Constant.php" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375887729387" ignored="false" />
-    <file path="/index.phtml" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375891897975" ignored="false" />
-    <file path="/TicketController.php" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375891948828" ignored="false" />
+    <file path="/index.phtml" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375893669452" ignored="false" />
+    <file path="/TicketController.php" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375895184188" ignored="false" />
     <file path="/layout_helper.js" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375889783926" ignored="false" />
     <file path="/dummy.xml" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375890709277" ignored="false" />
+    <file path="/Client.php" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375894143095" ignored="false" />
+    <file path="/TicketStatus.php" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375894889733" ignored="false" />
+    <file path="/sent.phtml" changelist="9a9f9aa0-f0c4-4ca9-be39-58c74b80db86" time="1375894978588" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +48,11 @@
       <file leaf-file-name="index.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/ticket/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="110" selection-start="2620" selection-end="2649" vertical-scroll-proportion="-17.333334">
+            <state line="71" column="59" selection-start="2908" selection-end="2908" vertical-scroll-proportion="-9.291667">
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#5;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#6;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#6;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,25 +61,61 @@
       <file leaf-file-name="TicketController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/TicketController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="133" selection-start="456" selection-end="456" vertical-scroll-proportion="-10.0">
+            <state line="23" column="33" selection-start="699" selection-end="699" vertical-scroll-proportion="-7.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.ini" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ticket_system.sql" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/documents/ticket_system.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="181" column="0" selection-start="5253" selection-end="5253" vertical-scroll-proportion="0.9493243">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sent.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/ticket/sent.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="17" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketStatus.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/TicketStatus.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="45" selection-start="651" selection-end="651" vertical-scroll-proportion="-5.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketStatus.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Table/TicketStatus.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="6" selection-start="870" selection-end="870" vertical-scroll-proportion="-9.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="45" selection-start="850" selection-end="850" vertical-scroll-proportion="-2.9583333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.ini" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="12" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.7669173">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout_helper.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scripts/layout_helper/layout_helper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="34" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+            <state line="34" column="12" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,7 +124,7 @@
       <file leaf-file-name="layout.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="50" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-4.8333335">
+            <state line="9" column="25" selection-start="332" selection-end="332" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -98,15 +134,6 @@
         <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="307" column="1" selection-start="4420" selection-end="4437" vertical-scroll-proportion="-61.653847">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="35" selection-start="76" selection-end="85" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
@@ -136,10 +163,16 @@
         <option value="$PROJECT_DIR$/assets/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
         <option value="$PROJECT_DIR$/assets/scripts/layout_helper/layout_helper.js" />
-        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
-        <option value="$PROJECT_DIR$/application/views/scripts/ticket/index.phtml" />
-        <option value="$PROJECT_DIR$/application/controllers/TicketController.php" />
         <option value="$PROJECT_DIR$/application/configs/application.ini" />
+        <option value="$PROJECT_DIR$/application/views/scripts/ticket/index.phtml" />
+        <option value="$PROJECT_DIR$/application/models/Client.php" />
+        <option value="$PROJECT_DIR$/application/models/Table/Client.php" />
+        <option value="$PROJECT_DIR$/application/models/TicketStatus.php" />
+        <option value="$PROJECT_DIR$/application/models/Table/TicketStatus.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/ticket/sent.phtml" />
+        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
+        <option value="$PROJECT_DIR$/application/controllers/TicketController.php" />
+        <option value="$PROJECT_DIR$/documents/ticket_system.sql" />
       </list>
     </option>
   </component>
@@ -206,6 +239,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticket-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticket-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documents" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,49 +649,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/Table/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="0" selection-start="3020" selection-end="3020" vertical-scroll-proportion="-13.041667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/helper/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/helper/Encoding.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/helper/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Constant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="367" selection-end="367" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="365" vertical-scroll-proportion="-0.0">
@@ -666,13 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="50" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-4.8333335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scripts/layout_helper/layout_helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="34" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
@@ -689,25 +686,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/ticket/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="110" selection-start="2620" selection-end="2649" vertical-scroll-proportion="-17.333334">
+        <state line="71" column="59" selection-start="2908" selection-end="2908" vertical-scroll-proportion="-9.291667">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#5;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#form#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#6;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#6;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/TicketController.php">
+    <entry file="file://$PROJECT_DIR$/application/models/Table/Client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="133" selection-start="456" selection-end="456" vertical-scroll-proportion="-10.0">
+        <state line="58" column="65" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.3576052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="45" selection-start="850" selection-end="850" vertical-scroll-proportion="-2.9583333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Table/TicketStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="6" selection-start="870" selection-end="870" vertical-scroll-proportion="-9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/TicketStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="45" selection-start="651" selection-end="651" vertical-scroll-proportion="-5.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="689" column="41" selection-start="21940" selection-end="21940" vertical-scroll-proportion="0.79173553">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/ticket/sent.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="17" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="12" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.7669173">
+        <state line="34" column="12" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="25" selection-start="332" selection-end="332" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/TicketController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="33" selection-start="699" selection-end="699" vertical-scroll-proportion="-7.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/ticket_system.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="0" selection-start="5253" selection-end="5253" vertical-scroll-proportion="0.9493243">
           <folding />
         </state>
       </provider>

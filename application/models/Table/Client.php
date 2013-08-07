@@ -56,6 +56,25 @@ class Model_Table_Client extends Zend_Db_Table_Abstract
     }
 
     /**
+     * Get the value from the record with the given email address
+     *
+     * @param string $email_address
+     * @return array
+     */
+    public function getByEmailAddress($email_address)
+    {
+      $sql = $this->select()->where($this->_db->quoteInto("email_address = ?" , $email_address));
+
+      $result = $this->fetchRow($sql);
+      $ret = array();
+      if(!empty($result)){
+        $ret = $result->toArray();
+      }
+
+      return $ret;
+    }
+
+    /**
      * Insert the record in the database
      *
      * @param array $record

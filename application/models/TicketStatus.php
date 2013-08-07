@@ -34,6 +34,11 @@ class Model_TicketStatus
         return self::getTableInstance()->getAll($ids);
     }
 
+    public static function getFirstInOrder()
+    {
+      return self::getTableInstance()->getFirstInOrder();
+    }
+
     /**
      * Get the value from the record with the given id
      *

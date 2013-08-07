@@ -27,13 +27,29 @@ class Model_Table_TicketStatus extends Zend_Db_Table_Abstract
         }
         
         $result = $this->fetchAll($sql);
-        
+
         $ret = array();
         if(!empty($result)){
         $ret = $result->toArray();
         }
-        
+
         return $ret;
+    }
+
+    public function getFirstInOrder() {
+      $sql = $this->select();
+
+      $sql->order('order ASC');
+
+      $result = $this->fetchRow($sql);
+
+      $ret = array();
+
+      if(!empty($result)){
+        $ret = $result->toArray();
+      }
+
+      return $ret;
     }
 
     /**

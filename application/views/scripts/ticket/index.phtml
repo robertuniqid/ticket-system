@@ -64,12 +64,26 @@
           <select class="span4"
                   id="ticket_category_id"
                   name="info[ticket_category_id]"
-              ><?php echo Model_Operation_HTML::generateSelectOptionsHTML($this->ticket_category_list_composed, (isset($info['ticket_category_id']) ? $info['ticket_category_id'] : ''))?></select>
+              ><option value="0">Please select...</option><?php echo Model_Operation_HTML::generateSelectOptionsHTML($this->ticket_category_list_composed, (isset($info['ticket_category_id']) ? $info['ticket_category_id'] : ''))?></select>
         </div>
       </div>
     </div>
     <div class="control-group">
-      <label class="control-label">Your Enquiry</label>
+      <label class="control-label" for="Title">Your problem</label>
+      <div class="controls">
+        <div class="input-prepend">
+          <span class="add-on"><i class="icon-exclamation-sign"></i></span>
+          <input class="span4"
+                 id="title"
+                 name="info[title]"
+                 type="text"
+                 value="<?php echo isset($info['title']) ? $info['title'] : ''?>"
+              >
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Describe your problem</label>
       <div class="controls span8" style="margin: 0">
         <textarea id="content" name="info[content]" style="width:100%;"></textarea>
       </div>
