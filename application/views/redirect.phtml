@@ -1,0 +1,11 @@
+<div class="alert alert-<?php echo $message_type;?>">
+    <?php echo $message;?>
+
+    <br/>
+
+    <a href="<?php echo $redirect_url;?>">Click here to skip waiting</a>
+</div>
+
+<script>
+    setTimeout("document.location = '<?php echo $redirect_url?>'", 2000);
+</script>

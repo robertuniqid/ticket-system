@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><?php echo isset($title) ? $title : Model_Constant::SCRIPT_NAME;?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le javascript -->
+    <script src="assets/scripts/jquery-1.10.2.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="assets/scripts/ajax_core.js"></script>
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Layout Helper -->
+    <script src="assets/scripts/layout_helper/layout_helper.js"></script>
+    <script src="assets/scripts/layout_helper/layout_helper_popup.js"></script>
+
+    <!-- Application Files -->
+    <script src="assets/scripts/request_handler/application.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        LayoutHelper.Init();
+        Application.Init();
+      });
+    </script>
+
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.php" class="brand"><?php echo Model_Constant::SCRIPT_NAME;?></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <?php foreach(Model_Constant::$_menu_information as $menu_information) : ?>
+                      <li class="<?php echo strtolower($menu_information['url']) == strtolower(Model_Helper_Request::fetchCurrentPage()) ? 'active' : '';?>">
+                          <a href="<?php echo $menu_information['url']?>">
+                            <i class="<?php echo $menu_information['class']?>"
+                                ><?php echo isset($menu_information['icon_content']) ? $menu_information['icon_content'] : '';?></i>
+                            <?php echo $menu_information['name']?>
+                          </a>
+                      </li>
+                    <?php endforeach;?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="hero-unit">
+        <?php if(isset($title)) : ?>
+          <h3><?php echo $title;?></h3>
+        <?php endif;?>
+
+        <div class="main-content">
+             <?php echo isset($layout_main_content) ? $layout_main_content : '';?>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Easy-Development 2013</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
