@@ -20,19 +20,24 @@
   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
   <!-- Layout Helper -->
-  <script src="assets/scripts/chosen_select_option/chosen.jquery.min.js"></script>
-  <link href="assets/scripts/chosen_select_option/chosen.css" rel="stylesheet">
-
-  <!-- Layout Helper -->
   <script src="assets/scripts/layout_helper/layout_helper.js"></script>
+  <script src="assets/scripts/layout_helper/layout_helper_hash.js"></script>
+  <script src="assets/scripts/layout_helper/layout_helper_switcher.js"></script>
 
   <!-- Application Files -->
   <script src="assets/scripts/request_handler/application.js"></script>
+
+  <?php foreach(Model_Hook_RequestHandler::getInstance()->getHandlerInformation() as $script_path => $script_run) : ?>
+    <script src="<?php echo $script_path?>" type="text/javascript"></script>
+  <?php endforeach;?>
 
   <script type="text/javascript">
     $(document).ready(function(){
       LayoutHelper.Init();
       Application.Init();
+      <?php foreach(Model_Hook_RequestHandler::getInstance()->getHandlerInformation() as $script_path => $script_run) : ?>
+      <?php echo $script_run;?>
+      <?php endforeach;?>
     });
   </script>
 
@@ -59,7 +64,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" id="main-container">
   <div class="well">
     <div class="main-content">
       <?php echo $this->layout()->content;?>

@@ -27,11 +27,16 @@ class Model_Ticket
      * Get all
      *
      * @param array $ids
+     * @param string $order
      * @return array
      */
-    public static function getAll($ids = array ())
+    public static function getAll($ids = array (), $order = null)
     {
-        return self::getTableInstance()->getAll($ids);
+      return self::getTableInstance()->getAll($ids, $order);
+    }
+
+    public static function getAllWithClientInformation($args = array()) {
+      return self::getTableInstance()->getAllWithClientInformation($args);
     }
 
     /**

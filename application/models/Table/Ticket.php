@@ -16,15 +16,19 @@ class Model_Table_Ticket extends Zend_Db_Table_Abstract
      * Get all
      *
      * @param array $ids
+     * @param string $order
      * @return array
      */
-    public function getAll($ids = array ())
+    public function getAll($ids = array (), $order = null)
     {
         $sql = $this->select();
         
         if(!empty($ids) && is_array($ids)){
-        $sql->where("id IN (" . implode("," , $ids) . ")");
+          $sql->where("id IN (" . implode("," , $ids) . ")");
         }
+
+        if($order !== null)
+          $sql->order($order);
         
         $result = $this->fetchAll($sql);
         
@@ -34,6 +38,30 @@ class Model_Table_Ticket extends Zend_Db_Table_Abstract
         }
         
         return $ret;
+    }
+
+    public function getAllWithClientInformation($args = array()) {
+      $sql = 'SELECT t.*,
+                     tc.name         as ticket_category_name,
+                     ts.name         as ticket_status_name,
+                     ts.type         as ticket_status_type,
+                     c.first_name    as client_first_name,
+                     c.last_name     as client_last_name,
+                     c.email_address as client_email_address,
+                     c.phone_number  as client_phone_number
+                FROM ticket t
+                LEFT JOIN client c ON t.client_id = c.id
+                LEFT JOIN ticket_category tc ON tc.id = t.ticket_category_id
+                LEFT JOIN ticket_status   ts ON ts.id = t.ticket_status_id ';
+
+      if(isset($args['order'])) {
+        $sql .= ' ORDER BY ' . $args['order'];
+      }
+
+      if(isset($args['limit']) && is_numeric($args['limit']))
+        $sql .= ' LIMIT ' . (isset($args['offset']) && is_numeric($args['offset']) ? $args['offset'] : 0) . ', ' . $args['limit'];
+
+      return $this->_db->fetchAll($sql);
     }
 
     /**

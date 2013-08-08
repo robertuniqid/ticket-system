@@ -18,4 +18,6 @@ class Model_Constant
     const SESSION_NAMESPACE = 'ticket_system';
     const SITE_TITLE        = 'Ticket System';
 
+    const TICKET_ADMINISTRATION_DEFAULT_LIMIT  = 30;
+    const TICKET_ADMINISTRATION_DEFAULT_PAGE_NUMBER = 1;
 }

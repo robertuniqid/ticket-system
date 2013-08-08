@@ -8,6 +8,8 @@ var LayoutHelper = {
         $(this).css('margin', '0 auto');
         $(this).css('float', 'none');
       });
+
+      LayoutHelper.Switcher.Init('#main-container');
     },
 
     EncodeUrl : function(url){
